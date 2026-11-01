@@ -1,0 +1,17 @@
+# Visual Studio에서 생성하는 파일
+.vs/
+*.sln
+*.suo
+*.user
+*.VC.db
+*.VC.opendb
+
+# 언리얼에서 다시 생성할 수 있는 파일
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+# 직접 개발하는 플러그인의 빌드 결과
+Plugins/**/Binaries/
+Plugins/**/Intermediate/
