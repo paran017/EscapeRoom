@@ -12,16 +12,16 @@ class ESCAPEROOM_API AEscapeCharacter : public ACharacter
 public:
     AEscapeCharacter();
 
-    // 열쇠 획득
     UFUNCTION(BlueprintCallable, Category = "Inventory")
     void GiveKey();
 
-    // 열쇠 보유 여부 확인
     UFUNCTION(BlueprintPure, Category = "Inventory")
     bool HasKey() const;
 
+    UFUNCTION(BlueprintPure, Category = "Interaction")
+    FText GetInteractionText() const;
+
 private:
-    // 플레이 중 확인 가능하며 블루프린트에서는 읽기만 허용
     UPROPERTY(
         VisibleAnywhere,
         BlueprintReadOnly,
