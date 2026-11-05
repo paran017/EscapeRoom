@@ -1,4 +1,4 @@
-#include "EscapeExit.h"
+ï»¿#include "EscapeExit.h"
 
 #include "EscapeCharacter.h"
 #include "Blueprint/UserWidget.h"
@@ -17,7 +17,7 @@ AEscapeExit::AEscapeExit()
 
     ExitBox->SetBoxExtent(FVector(80.0f, 100.0f, 150.0f));
 
-    // ÇÃ·¹ÀÌ¾î¿Í °ãÄ¡´ÂÁö¸¸ °Ë»çÇÏ°í ÀÌµ¿Àº ¸·Áö ¾Ê´Â´Ù.
+    // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ï¿½Ï°ï¿½ ï¿½Ìµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Â´ï¿½.
     ExitBox->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
     ExitBox->SetCollisionResponseToAllChannels(ECR_Ignore);
     ExitBox->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap);
@@ -80,7 +80,7 @@ void AEscapeExit::OnExitEntered(
 
     SuccessWidget->AddToViewport();
 
-    // ÀÔ·ÂÀ» ¼º°ø È­¸é¿¡ Àü´ŞÇÑ´Ù.
+    // ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È­ï¿½é¿¡ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
     FInputModeUIOnly InputMode;
     InputMode.SetWidgetToFocus(SuccessWidget->TakeWidget());
 

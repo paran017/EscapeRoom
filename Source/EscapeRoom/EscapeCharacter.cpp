@@ -1,4 +1,4 @@
-#include "EscapeCharacter.h"
+﻿#include "EscapeCharacter.h"
 
 #include "EscapeDoor.h"
 #include "KeyPickup.h"

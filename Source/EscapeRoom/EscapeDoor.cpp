@@ -1,4 +1,4 @@
-#include "EscapeDoor.h"
+ï»¿#include "EscapeDoor.h"
 
 #include "Components/InputComponent.h"
 #include "Components/SceneComponent.h"
@@ -15,7 +15,7 @@ AEscapeDoor::AEscapeDoor()
 {
     PrimaryActorTick.bCanEverTick = true;
 
-    // ¾×ÅÍ ¿øÁ¡ÀÌ ¹® °¡ÀåÀÚ¸®ÀÇ °æÃ¸ À§Ä¡°¡ µÈ´Ù.
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¸ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½È´ï¿½.
     Hinge = CreateDefaultSubobject<USceneComponent>(TEXT("Hinge"));
     SetRootComponent(Hinge);
     Hinge->SetMobility(EComponentMobility::Movable);
@@ -35,11 +35,11 @@ AEscapeDoor::AEscapeDoor()
         DoorMesh->SetStaticMesh(CubeAsset.Object);
     }
 
-    // ±âº» Å¥ºê: ÇÑ º¯ÀÌ 100cm.
-    // ¹® Å©±â: µÎ²² 10cm, Æø 100cm, ³ôÀÌ 220cm.
+    // ï¿½âº» Å¥ï¿½ï¿½: ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 100cm.
+    // ï¿½ï¿½ Å©ï¿½ï¿½: ï¿½Î²ï¿½ 10cm, ï¿½ï¿½ 100cm, ï¿½ï¿½ï¿½ï¿½ 220cm.
     DoorMesh->SetRelativeScale3D(FVector(0.1f, 1.0f, 2.2f));
 
-    // ¹® Áß½ÉÀ» ¿Å°Ü ÇÑÂÊ °¡ÀåÀÚ¸®°¡ °æÃ¸¿¡ ´ê°Ô ÇÑ´Ù.
+    // ï¿½ï¿½ ï¿½ß½ï¿½ï¿½ï¿½ ï¿½Å°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¸ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½.
     DoorMesh->SetRelativeLocation(FVector(0.0f, 50.0f, 110.0f));
     DoorMesh->SetRelativeRotation(FRotator::ZeroRotator);
 
@@ -50,11 +50,11 @@ void AEscapeDoor::BeginPlay()
 {
     Super::BeginPlay();
 
-    // ÀÌÀü¿¡ ¹èÄ¡µÈ ¾×ÅÍ¿¡ ³²Àº ¹®Â¦ È¸Àü¡¤À§Ä¡µµ ÃÊ±âÈ­ÇÑ´Ù.
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½Í¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¦ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ê±ï¿½È­ï¿½Ñ´ï¿½.
     DoorMesh->SetRelativeLocation(FVector(0.0f, 50.0f, 110.0f));
     DoorMesh->SetRelativeRotation(FRotator::ZeroRotator);
 
-    // ·¹º§¿¡¼­ ¹èÄ¡ÇÑ ¾×ÅÍÀÇ ¹æÇâÀ» ´ÝÈù ¹æÇâÀ¸·Î ±â¾ïÇÑ´Ù.
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
     ClosedRotation = GetActorRotation();
     CurrentAngle = 0.0f;
     bIsOpen = false;
@@ -95,8 +95,8 @@ void AEscapeDoor::Tick(float DeltaTime)
         OpenSpeed
     );
 
-    // ÃÊ±â ¹æÇâÀ» ±âÁØÀ¸·Î °æÃ¸ÀÇ ·ÎÄÃ ZÃà ÁÖÀ§·Î È¸ÀüÇÑ´Ù.
-    // ¾×ÅÍ À§Ä¡´Â ¹Ù²ÙÁö ¾ÊÀ¸¹Ç·Î °æÃ¸Àº Á¦ÀÚ¸®¿¡ °íÁ¤µÈ´Ù.
+    // ï¿½Ê±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Zï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ï¿½Ñ´ï¿½.
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ù²ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ï¿½Ã¸ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½È´ï¿½.
     const FQuat DoorRotation =
         ClosedRotation.Quaternion()
         * FRotator(0.0f, CurrentAngle, 0.0f).Quaternion();

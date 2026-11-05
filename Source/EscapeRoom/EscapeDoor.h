@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
@@ -21,22 +21,22 @@ protected:
     virtual void BeginPlay() override;
 
 private:
-    // ¹®ÀÌ È¸ÀüÇÏ´Â °æÃ¸ À§Ä¡
+    // ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½Ã¸ ï¿½ï¿½Ä¡
     UPROPERTY(VisibleAnywhere, Category = "Door")
     TObjectPtr<USceneComponent> Hinge;
 
-    // È­¸é¿¡ º¸ÀÌ´Â ¹®
+    // È­ï¿½é¿¡ ï¿½ï¿½ï¿½Ì´ï¿½ ï¿½ï¿½
     UPROPERTY(VisibleAnywhere, Category = "Door")
     TObjectPtr<UStaticMeshComponent> DoorMesh;
 
     UPROPERTY(EditAnywhere, Category = "Door")
     float OpenAngle = 90.0f;
 
-    // ÃÊ´ç È¸Àü °¢µµ
+    // ï¿½Ê´ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     UPROPERTY(EditAnywhere, Category = "Door")
     float OpenSpeed = 120.0f;
 
-    // »óÈ£ÀÛ¿ë °Å¸®: ¾ð¸®¾ó ±âº» ´ÜÀ§´Â cm
+    // ï¿½ï¿½È£ï¿½Û¿ï¿½ ï¿½Å¸ï¿½: ï¿½ð¸®¾ï¿½ ï¿½âº» ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ cm
     UPROPERTY(EditAnywhere, Category = "Door")
     float InteractionDistance = 250.0f;
 
@@ -44,7 +44,7 @@ private:
     float CurrentAngle = 0.0f;
     FRotator ClosedRotation;
     void TryInteract();
-    // ¿¡µðÅÍ¿¡¼­ Àá±Ý ¿©ºÎ¸¦ ¼³Á¤ÇÒ ¼ö ÀÖ´Ù.
+    // ï¿½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½.
     UPROPERTY(EditAnywhere, Category = "Door")
     bool bIsLocked = true;
 };

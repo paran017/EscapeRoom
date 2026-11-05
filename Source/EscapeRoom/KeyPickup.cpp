@@ -19,7 +19,6 @@ AKeyPickup::AKeyPickup()
 
     SetRootComponent(KeyMesh);
 
-    // 임시 열쇠 모양으로 구체 사용
     static ConstructorHelpers::FObjectFinder<UStaticMesh> SphereAsset(
         TEXT("/Engine/BasicShapes/Sphere.Sphere")
     );
@@ -31,7 +30,6 @@ AKeyPickup::AKeyPickup()
 
     KeyMesh->SetRelativeScale3D(FVector(0.25f));
 
-    // 이동은 막지 않고, 바라보기 검사에는 잡히도록 설정
     KeyMesh->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
     KeyMesh->SetCollisionResponseToAllChannels(ECR_Ignore);
     KeyMesh->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
@@ -106,7 +104,7 @@ void AKeyPickup::TryPickup()
     {
         Player->GiveKey();
 
-        // 획득한 열쇠를 레벨에서 제거
+
         Destroy();
     }
 }

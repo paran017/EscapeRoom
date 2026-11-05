@@ -1,4 +1,4 @@
-#pragma once
+癤�#pragma once
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
@@ -22,7 +22,6 @@ private:
     UPROPERTY(VisibleAnywhere, Category = "Exit")
     TObjectPtr<UBoxComponent> ExitBox;
 
-    // 에디터에서 성공 화면 블루프린트를 지정한다.
     UPROPERTY(EditAnywhere, Category = "Exit")
     TSubclassOf<UUserWidget> SuccessWidgetClass;
 
